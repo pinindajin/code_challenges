@@ -25,6 +25,7 @@ simpleAssert(longestCommonSubstring("aaaa","aa"), "aa")
 simpleAssert(longestCommonSubstring("","aa"), "")
 simpleAssert(longestCommonSubstring("ABBA","ABCABA"), "ABBA")
 
+
 function longestCommonSubstring(_s1, _s2) {
   const s1 = _s1.split('');
   const s2 = _s2.split('');
@@ -35,23 +36,22 @@ function longestCommonSubstring(_s1, _s2) {
       return acc;
     }
     const longestCommonSubstringFromCurIndex = longestCommonSubstringFromZeroIndex(s1FromCurrentIndex, s2);
-    //console.log(`LONGEST ${longestCommonSubstringFromCurIndex}`)
     if (longestCommonSubstringFromCurIndex.length > acc.length) {
       return longestCommonSubstringFromCurIndex;
     }
     return acc;
   }, '');
+  /* Psuedocode comments before writing code */
   // iterate through s1
-    // if length of the rest of s1 from(inclusive) cur to end of s1 is less than the length of the current longest subsequence, break out of loop
-    // figure out the longest common substring for s1 and s2 but only from the cur element to the end of s1 within s1.
-    // if greater than current subsequence, then replace
+  // if length of the rest of s1 from(inclusive) cur to end of s1 is less than the length of the current longest subsequence, break out of loop
+  // figure out the longest common substring for s1 and s2 but only from the cur element to the end of s1 within s1.
+  // if greater than current subsequence, then replace
 
   // return longest common subsequence
 }
 
 function longestCommonSubstringFromZeroIndex(s1, s2) {
   return s1.slice(0).reduce((acc, cur, idx, arr) => {
-    //console.log('cur',cur)
     if (acc.currentLongestSubstring.length > s2.length) {
       arr.splice(idx);
       return acc;
@@ -62,10 +62,8 @@ function longestCommonSubstringFromZeroIndex(s1, s2) {
       return acc;
     }
     const remainingS2 = s2.slice(nextS2CheckIndex);
-    //console.log(` ${remainingS2}  ${acc.lastMatchIndex}  ${nextS2CheckIndex}  ${s2} ____${acc.currentLongestSubstring}`)
     const foundIndex = remainingS2.findIndex(_cur => cur === _cur);
     const matchIndex = foundIndex + (s2.length - remainingS2.length);
-    //console.log('match index', matchIndex, (s2.length - remainingS2.length))
     if(foundIndex >= 0) {
       return Object.assign(acc, {
         currentLongestSubstring: (acc.currentLongestSubstring+s2[matchIndex]),
@@ -74,6 +72,7 @@ function longestCommonSubstringFromZeroIndex(s1, s2) {
     }
     return acc;
   }, { currentLongestSubstring: '', lastMatchIndex: -1, }).currentLongestSubstring;
+  /* Pseudocode comments before writing code */
   // iterate through s1 starting at the index of the outer loop cur
       // perform should continue checks (IE if current subsequence is longer than whole length of second string)
       
