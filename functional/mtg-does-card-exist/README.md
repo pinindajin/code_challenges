@@ -1,14 +1,13 @@
-## Functional Programming
-Simply folder for different implementations of the following functional programming problem.
+## Passport Express
+Authenticated Express App.
 
 ## The Problem:
-Build a webserver with an endpoint that takes as an argument of a Magic The Gathering cardname and returns whether or not that card is a real Magic The Gathering card.
+Integrate Passport into an Express app for authentication.
 
 ### Requirements:
-- Hit an external API to determine if card is a real MTG card.
-- After determining if card is real or not, store results in database.
-- When a call is made to the endpoint, should always check database first to see if a determination has already been made about whether the card is real or not.
-- External API must be based around https://docs.magicthegathering.io/. This includes setting up config for any auth info to use this API.
+- User trying to hit a route that requires authorization but is not logged in should be redirected to login.
+- User trying to hit route that requires authorization and IS logged in should have his permissions checked. Proceed if yes, not if no.
+- User hitting login route should be able to login using passport, thus being authenticated.
 
 ### Notes:
-This is mostly about managing side effects and working with compositions of functions. The external API and Database can be mocked for any implementations. Even if mocked there still must be config.
+Authentication strategy doesn't matter. Just try a few different ones.
