@@ -8,6 +8,8 @@
  * 
  * An example of a unique sequence of moves could be represented as an array of 
  * strings such as the following: ["Sambal", "Olec", "Pretty", "Bird", "Hunger", "Olec"]
+ *
+ * Note that moves can be repeated.
  * 
  * After having written down two separate unique sequences,
  * Alex has then finds the longest common subsequence among
