@@ -12,7 +12,7 @@
  * Note that moves can be repeated.
  * 
  * After having written down two separate unique sequences,
- * Alex has then finds the longest common subsequence among
+ * Alex then finds the longest common subsequence among
  * the two unique sequences so that he can put extra practice
  * into those moves.
  * 
