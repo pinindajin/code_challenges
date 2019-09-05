@@ -21,6 +21,7 @@
  * to figure out the longest common subsequence among two unique sequences
  * for him.
  * 
+ * 
  * EXAMPLE CASES
  * 
  * ['Dog', 'Yam', 'Dog', 'Tattoo', 'Ginger', 'Shoe']
@@ -40,7 +41,9 @@
  * =>
  * ['Dog', 'Dog']
  * 
- * 
+ *
+ * It should be noted that sometimes Alex determines there is only one
+ * way to do a climb. In this case there is no longest common subsequence.
  * ['Tea', 'Tea', 'Tea']
  * []
  * => 
@@ -51,6 +54,15 @@
  * ['Dog', 'Yam', 'Trout', 'Dog', 'Yam', 'Dog'] 
  * => 
  * ['Dog', 'Yam', 'Yam', 'Dog']
+ * 
+ * 
+ * It should also be noted that sometimes there are ties for longest common
+ * subsequence. In this Alex does not care which longest common subsequence
+ * you give him.
+ * ['Ginger', 'Dog', 'Spyro', 'Yam', 'Tea']
+ * ['Dog', 'Yam', 'Ginger', 'Spyro', 'Tea']
+ * =>
+ * ['Ginger', 'Spyro', 'Tea']
  */
 
 const longestCommonSubsequence = (sequenceA, sequenceB) => {
