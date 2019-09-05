@@ -3,7 +3,7 @@
  * 
  * When Alex is preparing for his next climb and has decided that the 
  * best way to prepare is to write down two different unique sequences
- * of moves he can do to complete his route. Alex has gives each individual 
+ * of moves he can do to complete his route. Alex gives each individual 
  * move within a given unique sequence a code name. 
  * 
  * An example of a unique sequence of moves could be represented as an array of 
